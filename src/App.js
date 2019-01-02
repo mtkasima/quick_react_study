@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, NavLink, Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, NavLink, Route } from 'react-router-dom';
 import MyArticle from './MyArticle';
 
 export default class App extends Component {
@@ -13,9 +13,7 @@ export default class App extends Component {
             <li><NavLink to="/article/10" activeStyle={current}>記事No.10</NavLink></li>
           </ul>
           <hr/>
-          <Switch>
-            <Route exact path="/article/:id" component={MyArticle}/>
-          </Switch>
+          <Route path="/article/:id" component={MyArticle}/>
         </div>
       </Router>
     );
